@@ -1,0 +1,48 @@
+.solicitudes-container .title-and-button-add {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.solicitudes-container .title-and-button-add .ui.basic.button {
+   color: var(--blue-1) !important;
+   border: 2px solid var(--blue-1);
+   padding: 15px;
+   font-weight: 600;
+   margin-left: 10px;
+}
+
+.solicitudes-container .title-and-button-add .ui.basic.button:hover {
+   opacity: .9;
+}
+
+.solicitudes-container .table-contain {
+   width: 100% !important;
+   overflow-x: auto;
+}
+
+.solicitudes-container .ui.table th {
+   background: var(--blue-5);
+}
+
+.solicitudes-container .ui.pagination.menu {
+   background-color: #f3f0f0;
+   width: max-content;
+}
+
+.solicitudes-container .ui.menu .item {
+   color: black;
+}
+
+.solicitudes-container .ui.pagination.menu .active.item {
+   background-color: var(--blue-5);
+}
+
+.solicitudes-container .pagination {
+   display: flex;
+   justify-content: center;
+   margin-top: 40px;
+   width: 100%;
+   overflow-x: auto;
+}

@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import {ToastContainer} from "react-toastify";
+import AuthContext from "./context/auth/authContext";
+import {Suspense, useContext, useEffect} from "react";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import Loading from "./components/Loading";
+import Empleado from "./pages/Empleado";
+import Solicitud from "./pages/Solicitud";
 
 function App() {
+
+  const { user, token, validateTokenIfExists } = useContext(AuthContext);
+
+  useEffect(() => {
+    validateTokenIfExists();
+  }, [token]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<Loading/>}>
+        <Routes>
+          <Route path="*" element={<Navigate to="/" /> } />
+          <Route path="/" element={<Home />}>
+            <Route path="solicitudes" element={<Solicitud />} />
+            <Route path="empleados" element={<Empleado />} />
+          </Route>
+        </Routes>
+      </Suspense>
+      <ToastContainer
+        position="top-center"
+        theme="colored"
+        autoClose="4000"
+      />
+    </BrowserRouter>
   );
 }
 

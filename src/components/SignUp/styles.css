@@ -1,0 +1,16 @@
+.actions-modal-signup .ui.button {
+   background-color: var(--blue-2);
+   font-size: 1.2rem;
+   color: white;
+   border-radius: 8px;
+}
+
+.form-signup .field input,
+.form-signup .field select,
+.form-signup .field input:focus {
+   border: 1px solid black !important;
+}
+
+.form-signup .field {
+   width: 100%;
+}

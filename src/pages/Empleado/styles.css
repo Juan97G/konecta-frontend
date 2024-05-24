@@ -1,0 +1,58 @@
+.empleados-container .title-and-button-add {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.empleados-container .title-and-button-add .ui.basic.button {
+   color: var(--blue-1) !important;
+   border: 2px solid var(--blue-1);
+   padding: 15px;
+   font-weight: 600;
+   margin-left: 10px;
+}
+
+.empleados-container .title-and-button-add .ui.basic.button:hover {
+   opacity: .9;
+}
+
+.empleados-container .table-contain {
+   width: 100% !important;
+   overflow-x: auto;
+}
+
+.empleados-container .ui.table th {
+   background: var(--blue-5);
+}
+
+.empleados-container .ui.pagination.menu {
+   background-color: #f3f0f0;
+   width: max-content;
+}
+
+.empleados-container .ui.menu .item {
+   color: black;
+}
+
+.empleados-container .ui.pagination.menu .active.item {
+   background-color: var(--blue-5);
+}
+
+.empleados-container .pagination {
+   display: flex;
+   justify-content: center;
+   margin-top: 40px;
+   width: 100%;
+   overflow-x: auto;
+}
+
+.text-not-records-products {
+   text-align: center;
+   font-size: 18px;
+}
+
+.input-search-table {
+   width: 300px;
+
+}
